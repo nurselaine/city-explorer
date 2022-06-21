@@ -14,16 +14,27 @@
 06-20-2022 4:01pm
 
 ## Credit & Collaborations
+1. Matthew Larkin - WRRCA Model
 
-
+![WRRCA Model](./public/My%20First%20Board.jpg)
 
 ## Time Estimates 
-Name of feature: ________________________________
+Name of feature: Getting Set Up
 
-Estimate of time needed to complete: _____
+Estimate of time needed to complete: 30 min
 
-Start time: _____
+Start time: 4pm
 
-Finish time: _____
+Finish time: 4:22
 
-Actual time needed to complete: _____
+Actual time needed to complete: 22min
+
+Name of feature: Locations
+
+Estimate of time needed to complete: 1hr
+
+Start time: 4:25pm
+
+Finish time: 
+
+Actual time needed to complete: 22min
