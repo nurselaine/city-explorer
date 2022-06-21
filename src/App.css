@@ -21,7 +21,7 @@ form input {
   height: 4vw;
 }
 
-button{
+button.search{
   display: block;
   margin: auto;
   margin-top: 10px;

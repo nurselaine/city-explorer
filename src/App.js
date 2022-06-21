@@ -3,6 +3,7 @@ import React from 'react';
 import './App.css';
 import ListGroup from 'react-bootstrap/ListGroup';
 import Figure from 'react-bootstrap/Figure';
+import ErrorAlert from './components/ErrorAlert';
 
 class App extends React.Component {
   constructor(props){
@@ -14,6 +15,8 @@ class App extends React.Component {
       lat: 0,
       lon: 0,
       cityImg: '',
+      error: false,
+      errorMessage: '',
     }
   }
   handleChange = (e) => {
@@ -29,13 +32,35 @@ class App extends React.Component {
       city: this.state.userInput,
     })
     let url = `https://us1.locationiq.com/v1/search.php?key=${process.env.REACT_APP_LOCATIONIQ_API_KEY}&q=${this.state.userInput}&format=json`;
-    let cityInfo = await axios.get(url);
-    this.setState({
-      cityObj: cityInfo.data[0],
-      lat: this.state.cityObj.lat,
-      lon: this.state.cityObj.lon,
-      
-    })
+    try {
+      let cityInfo = await axios.get(url);
+      this.setState({
+        cityObj: cityInfo.data[0],
+        lat: this.state.cityObj.lat,
+        lon: this.state.cityObj.lon,
+        error: false,
+      })
+    } catch (error) {
+      let errorMessage = `An error occured: ${error.message}`;
+      this.setState({
+        error: true,
+        errorMessage: errorMessage,
+      })
+    }
+  }
+
+  handleclose = () => {
+    if(this.state.error){
+      this.setState({
+        error: false,
+      })
+    }
+  }
+
+  setShow = () => {
+      this.setState({
+        error: true,
+      })
   }
 
   render() {
@@ -44,7 +69,7 @@ class App extends React.Component {
         <form onSubmit={this.handleSubmit}>
           <label>City Explorer</label>
           <input placeholder="Enter A City 🔎" value={this.state.userInput} onChange={this.handleChange}/>
-          <button type='submit'>Explore!</button>
+          <button className='search' type='submit'>Explore!</button>
         </form>
         <Figure>
       <Figure.Image
@@ -62,6 +87,8 @@ class App extends React.Component {
           </ListGroup>
         </Figure.Caption>
       </Figure>
+      {this.state.error ? <ErrorAlert setShow={this.handleShow} errorMessage={this.state.errorMessage} onClose={this.handleclose} />
+      : ''}
       </div>
     )
   }
