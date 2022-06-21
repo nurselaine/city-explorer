@@ -35,6 +35,15 @@ Estimate of time needed to complete: 1hr
 
 Start time: 4:25pm
 
-Finish time: 
+Finish time: 6:30
 
-Actual time needed to complete: 22min
+Actual time needed to complete: 2hours
+Name of feature: Maps
+
+Estimate of time needed to complete: 1hr
+
+Start time: 6:30pm
+
+Finish time: 7:00
+
+Actual time needed to complete: 30 min

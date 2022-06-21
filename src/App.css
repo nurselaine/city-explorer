@@ -1,0 +1,46 @@
+.app-container {
+  text-align: center;
+  margin: 5vw 2vw;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: #E9DAC1;
+  height: 100vw;
+  max-width: 950px;
+  border-radius: 15px;
+}
+
+form label{
+  display: block;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: #18978F;
+}
+
+form input {
+  border: none;
+  border-radius: 2px;
+  height: 4vw;
+}
+
+button.search{
+  display: block;
+  margin: auto;
+  margin-top: 10px;
+  padding: 5px 35px;
+  border: none;
+  box-shadow: 5px 5px 15px -3px darkgray;
+  background-color: #18978F;
+  color:aliceblue;
+  font-family: Geneva, Verdana, sans-serif;
+  cursor: pointer;
+}
+
+button:hover{
+  box-shadow: 5px 5px 15px -3px darkgray;
+  background-color:#F7ECDE;
+  color:#18978F;
+}
+
+.figure-caption{
+  color: #18978F;
+}
+
