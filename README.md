@@ -16,11 +16,15 @@
 ## Credit & Collaborations
 1. Matthew Larkin - WRRCA Model
 
-![WRRCA Model](./public/My%20First%20Board.jpg)
+![WRRCA Model](./public/my-first-board.jpg)
 
 2. KC Hofstetter - WRRCA Model 2.0
 
 ![WRRCA Model](./public/WRRC2.0.jpg)
+
+3. Falashade Greene - WRRCA Model 3.0
+
+![WRRCA Model](./public/my-first-board.jpg)
 
 ## Time Estimates 
 Name of feature: Getting Set Up
