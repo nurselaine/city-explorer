@@ -10,8 +10,9 @@ class Movies extends React.Component{
         <Carousel.Item>
           <img 
             className='d-block w-100'
-            src={`.${obj.imgUrl}`}
-            alt={idx}
+            src='../logo512.png'
+            alt={obj.title}
+            key={idx}
           />
           <Carousel.Caption>
             <h3>{obj.title}</h3>
