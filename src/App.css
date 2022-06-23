@@ -1,9 +1,13 @@
+#root {
+  height: auto;
+}
+
 .app-container {
   text-align: center;
   margin: 5vw 2vw;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   background-color: #E9DAC1;
-  height: 100vw;
+  height: auto;
   max-width: 950px;
   border-radius: 15px;
 }
