@@ -26,6 +26,10 @@
 
 ![WRRCA Model](./public/my-first-board.jpg)
 
+3. Stephanie Hill - WRRCA Model 4.0
+
+![WRRCA Model](./public/WRRClab09.jpeg)
+
 ## Time Estimates 
 Name of feature: Getting Set Up
 
@@ -84,3 +88,14 @@ Start time: 6:30pm
 Finish time: 7:00
 
 Actual time needed to complete: 30 min
+
+## Day 3
+Name of feature: Refactor Components
+
+Estimate of time needed to complete: 1hr
+
+Start time: 2:30pm
+
+Finish time: 4:30
+
+Actual time needed to complete: 1hr
