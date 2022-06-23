@@ -5,6 +5,7 @@ import ListGroup from 'react-bootstrap/ListGroup';
 import Figure from 'react-bootstrap/Figure';
 import ErrorAlert from './components/ErrorAlert';
 import Weather from './components/Weather';
+import Movies from './components/Movies';
 
 class App extends React.Component {
   constructor(props){
@@ -19,6 +20,7 @@ class App extends React.Component {
       error: false,
       errorMessage: '',
       weatherData: [],
+      movieData: [],
     }
   }
   handleChange = (e) => {
@@ -51,9 +53,16 @@ class App extends React.Component {
         errorMessage: errorMessage,
       })
     }
+    if(this.state.cityObj){
+      this.handleWeatherSearch(cityInfo);
+      this.handleMovieSearch();
+    }
+  }
 
+  handleWeatherSearch = async (cityInfo) => {
     try {
-      let url = `${process.env.REACT_APP_SERVER}/weather?searchQuery=${this.state.userInput}&lat=${cityInfo.data[0].lat}&lon=${cityInfo.data[0].lon}`;
+      let url = `${process.env.REACT_APP_SERVER}/weather?lat=${cityInfo.data[0].lat}&lon=${cityInfo.data[0].lon}`;
+      console.log(url);
       let data = await axios.get(url);
       data = data.data;
       this.setState({
@@ -65,6 +74,17 @@ class App extends React.Component {
         errorMessage: error.message,
       })
     }
+  }
+
+  handleMovieSearch = async () => {
+    let url = `${process.env.REACT_APP_SERVER}/movies?query=${this.state.city}`;
+    let data = await axios.get(url);
+    data = data.data;
+    console.log(data);
+    console.log(url);
+    this.setState({
+      movieData: data,
+    })
   }
 
   handleclose = () => {
@@ -108,6 +128,7 @@ class App extends React.Component {
           </Figure.Caption>
         </Figure>
         <Weather data={this.state.weatherData || []} />
+        <Movies data={this.state.movieData || []} />
       </div>
     )
   }
