@@ -13,7 +13,7 @@ class Movie extends React.Component{
               <Carousel.Item key={idx}>
                 <img 
                 className='d-block w-100'
-                src='./logo512.png'
+                src={obj.imageUrl ? `https://image.tmdb.org/t/p/w500/${obj.imageUrl}` : '../../public/movie.jpg'}
                 alt={obj.title}
                 key={idx}
                 />
