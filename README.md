@@ -99,3 +99,14 @@ Start time: 2:30pm
 Finish time: 4:30
 
 Actual time needed to complete: 1hr
+
+## Day 4
+Name of feature: Add a cache and data to cache
+
+Estimate of time needed to complete: 2hr
+
+Start time: 1:30
+
+Finish time: 3:00
+
+Actual time needed to complete: 1.5hr
